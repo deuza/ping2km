@@ -149,7 +149,7 @@ ping2km: nope.invalid: Name or service not known
 
 ## History
 
-This script was created around 2002 on Solaris/FreeBSD at Club-Internet on 36 lines. 
+This script was created around 2002 on Solaris/FreeBSD at Club-Internet on 36 lines.      
 It was revived, corrected, made portable, and properly documented in March 2026.
 
 ## License
