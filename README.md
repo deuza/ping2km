@@ -61,10 +61,16 @@ The actual distance traveled by packets is always greater than the geographical 
 
 ```sh
 curl -O https://raw.githubusercontent.com/deuza/ping2km/main/ping2km.sh
-cp ping2km.sh ping2km
+mv ping2km.sh ping2km
 chmod +x ping2km
 sudo cp ping2km /usr/local/bin/
 ```
+
+If curl is not available, you can use another tool such as wget to retrieve the script directly.
+
+```sh
+wget https://raw.githubusercontent.com/deuza/ping2km/main/ping2km.sh
+``` 
 
 ## Dependencies
 
