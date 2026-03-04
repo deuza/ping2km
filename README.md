@@ -12,19 +12,7 @@
 
 The shell script `ping2km` is a humorous tool that runs a continuous ping to a host and estimates the "as the fibre flies" distance based on the Round Trip Time (RTT).
 
-```
-$ ping2km -c 4 www.gandi.fr
-PING www.gandi.fr (217.70.185.65) 56 data bytes
-64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=1 ttl=57 time=13.0 ms distance=1299 km
-64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=2 ttl=57 time=13.0 ms distance=1299 km
-64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=3 ttl=57 time=13.8 ms distance=1379 km
-64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=4 ttl=57 time=13.5 ms distance=1349 km
-
---- www.gandi.fr ping2km statistics ---
-4 packets transmitted, 4 received, 0% packet loss, time 3626ms
-rtt min/avg/max/mdev = 13.0/13.325/13.8/.308 ms
-fiber min/avg/max = 1299/1332/1379 km
-```
+![ping2km screenshot](screenshot.png)
 
 ## How it works
 
@@ -72,7 +60,8 @@ The actual distance traveled by packets is always greater than the geographical 
 ## Installation
 
 ```sh
-curl -O https://raw.githubusercontent.com/deuza/ping2km/main/ping2km
+curl -O https://raw.githubusercontent.com/deuza/ping2km/main/ping2km.sh
+cp ping2km.sh ping2km
 chmod +x ping2km
 sudo cp ping2km /usr/local/bin/
 ```
@@ -113,17 +102,17 @@ The script uses strictly POSIX `sed`, POSIX shell arithmetic `$((...))`, and `bc
 
 Ping a hostname (fiber, default) :
 ```
-$ ping2km minig.deuza.bzh
+$ ping2km www.deuza.net
 ```
 
 Send only 5 packets :
 ```
-$ ping2km -c 5 minig.deuza.bzh
+$ ping2km -c 5 www.deuza.net
 ```
 
 Ping with copper model (spoiler: same result as fiber, troll mode :P) :
 ```
-$ ping2km --copper minig.deuza.bzh
+$ ping2km --copper www.deuza.net
 ```
 
 Ping with theoretical speed of light in vacuum :
@@ -138,7 +127,7 @@ $ ping2km --dialup www.kernel.org
 
 Force IPv4 :
 ```
-$ ping2km -4 www.deuza.bzh
+$ ping2km -4 www.deuza.net
 ```
 
 Combine options :
@@ -169,6 +158,25 @@ It was revived, corrected, made portable, and properly documented in March 2026.
 DeuZa<a href="https://github.com/deuza"> root@deuza.bzh
 
 ## TODO       
-Nothing
+
+Nothing planned
+
+## BUGS
+
+Should not work under Solaris and with exotic ping outputs.     
+The output line that is parsed should look like this:
+
+```
+$ ping www.deuza.net
+PING www.deuza.net (66.6.44.4) 56(84) bytes of data.
+64 bytes from 66.6.44.4: icmp_seq=1 ttl=52 time=92.8 ms
+64 bytes from 66.6.44.4: icmp_seq=2 ttl=52 time=96.1 ms
+^C
+--- www.deuza.net ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 92.836/94.470/96.105/1.634 ms
+root@pi5:~#
+
+```
 
 <p align="center">With ❤️ by <a href="https://github.com/deuza">DeuZa</a></p></sup></sub>
