@@ -5,7 +5,7 @@
 #
 #  Author  : DeuZa <deuza@deuza.net>
 #  License : CC0 (https://creativecommons.org/publicdomain/zero/1.0/)
-#            WTFPL (Do What the Fuck You Want to Public License)
+#            WTFPL (http://www.wtfpl.net/)
 #  Version : see $VERSION below
 #  Repo    : https://github.com/deuza/ping2km
 #  README  : https://github.com/deuza/ping2km/blob/main/README.md
