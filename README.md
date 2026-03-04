@@ -14,7 +14,7 @@ The shell script `ping2km` is a humorous tool that runs a continuous ping to a h
 
 ```
 $ ping2km -c 4 www.gandi.fr
-PING www.gandi.fr (217.70.185.65) 56(84) 56 data bytes
+PING www.gandi.fr (217.70.185.65) 56 data bytes
 64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=1 ttl=57 time=13.0 ms distance=1299 km
 64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=2 ttl=57 time=13.0 ms distance=1299 km
 64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=3 ttl=57 time=13.8 ms distance=1379 km
