@@ -34,7 +34,7 @@ Four transmission models are available :
 |------|-------|--------|---------|
 | `--fiber` (default) | 2/3 c ≈ 199,861 km/s | 99.9305 | `distance = RTT_ms × 99.9305 km` |
 | `--copper` | 2/3 c ≈ 197,863 km/s | 98.93 | `distance = RTT_ms × 98.93 km` |
-| `--theorical` | c ≈ 299,792 km/s | 149.896 | `distance = RTT_ms × 149.896 km` |
+| `--theoretical` | c ≈ 299,792 km/s | 149.896 | `distance = RTT_ms × 149.896 km` |
 | `--dialup` | 2/3 c minus modem | 99.9305 | `distance = (RTT_ms - 120) × 99.9305 km` |
 
 Since the RTT (Round Trip Time) is a round trip, the estimated distance is :
@@ -49,7 +49,7 @@ The **fiber** model uses the real speed of light in optical fibre (~2/3 of *c*, 
 
 The **copper** model uses the real propagation speed in telephone twisted pair cables (~2/3 of *c*, due to the dielectric properties of the insulation). **Plot twist:** fiber and copper give nearly identical results (~1% difference). The signal travels at roughly the same speed in both media. The real difference between fiber and copper has never been propagation speed — it's bandwidth (data throughput) and attenuation (signal loss over distance).
 
-The **theorical** model uses *c*, the speed of light in vacuum (299,792 km/s). This is the absolute physical limit, achievable only in a perfect vacuum. In reality, no transmission medium reaches *c*. But where's the fun in reality?
+The **theoretical** model uses *c*, the speed of light in vacuum (299,792 km/s). This is the absolute physical limit, achievable only in a perfect vacuum. In reality, no transmission medium reaches *c*. But where's the fun in reality?
 
 The **dialup** model simulates the good old RTC (Public Switched Telephone Network) era. Analog modems added approximately 120 ms of round-trip latency just for signal encoding/decoding (modulation/demodulation — that's what "modem" stands for). This overhead is subtracted from the RTT before calculating the distance. Back in the dial-up days, the world was smaller. If the RTT is less than 120 ms, the distance shows `0 km [too close for dial-up]`.
 
@@ -92,7 +92,7 @@ On Debian/Ubuntu, `bc` might need to be installed : `apt install bc`
 ## Usage
 
 ```
-ping2km [--fiber|--copper|--theorical|--dialup] [-4] <host>
+ping2km [--fiber|--copper|--theoretical|--dialup] [-4] <host>
 ping2km --help
 ping2km --version
 ```
@@ -123,7 +123,7 @@ $ ping2km --copper minig.deuza.bzh
 
 Ping with theorical speed of light in vacuum :
 ```
-$ ping2km --theorical 1.1.1.1
+$ ping2km --theoretical 1.1.1.1
 ```
 
 Ping like it's 1998 :
