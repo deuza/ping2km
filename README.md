@@ -10,16 +10,16 @@
 
 **Ping with estimated distance based on the speed of light ... because why not? :D**
 
-The shell script `ping2km` is a humorous that runs a continuous ping to a host and estimates the "as the fibre flies" distance based on the Round Trip Time (RTT).
+The shell script `ping2km` is a humorous tool that runs a continuous ping to a host and estimates the "as the fibre flies" distance based on the Round Trip Time (RTT).
 
 ```
-$ ping2km www.gandi.fr
-PING www.gandi.fr (217.70.185.65) 56(84) bytes of data bytes
+$ ping2km -c 4 www.gandi.fr
+PING www.gandi.fr (217.70.185.65) 56(84) 56 data bytes
 64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=1 ttl=57 time=13.0 ms distance=1299 km
 64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=2 ttl=57 time=13.0 ms distance=1299 km
 64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=3 ttl=57 time=13.8 ms distance=1379 km
 64 bytes from www.gandi.fr (217.70.185.65): icmp_seq=4 ttl=57 time=13.5 ms distance=1349 km
-^C
+
 --- www.gandi.fr ping2km statistics ---
 4 packets transmitted, 4 received, 0% packet loss, time 3626ms
 rtt min/avg/max/mdev = 13.0/13.325/13.8/.308 ms
@@ -92,7 +92,7 @@ On Debian/Ubuntu, `bc` might need to be installed : `apt install bc`
 ## Usage
 
 ```
-ping2km [--fiber|--copper|--theoretical|--dialup] [-4] <host>
+ping2km [--fiber|--copper|--theoretical|--dialup] [-4] [-c count] <host>
 ping2km --help
 ping2km --version
 ```
@@ -116,12 +116,17 @@ Ping a hostname (fiber, default) :
 $ ping2km minig.deuza.bzh
 ```
 
+Send only 5 packets :
+```
+$ ping2km -c 5 minig.deuza.bzh
+```
+
 Ping with copper model (spoiler: same result as fiber, troll mode :P) :
 ```
 $ ping2km --copper minig.deuza.bzh
 ```
 
-Ping with theorical speed of light in vacuum :
+Ping with theoretical speed of light in vacuum :
 ```
 $ ping2km --theoretical 1.1.1.1
 ```
@@ -136,15 +141,16 @@ Force IPv4 :
 $ ping2km -4 www.deuza.bzh
 ```
 
+Combine options :
+```
+$ ping2km --dialup -4 -c 10 www.kernel.org
+```
+
 Unknown host:
 ```
 $ ping2km nope.invalid
 ping2km: nope.invalid: Name or service not known
 ```
-
-## TODO
-
-Add the --count or -c option to send only a specific number of packets.
 
 ## History
 
@@ -162,5 +168,7 @@ It was revived, corrected, made portable, and properly documented in March 2026.
 ## Author
 DeuZa<a href="https://github.com/deuza"> root@deuza.bzh
 
+## TODO       
+Nothing
 
 <p align="center">With ❤️ by <a href="https://github.com/deuza">DeuZa</a></p></sup></sub>
