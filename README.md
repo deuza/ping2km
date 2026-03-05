@@ -2,6 +2,7 @@
 ![GitHub Release Date](https://img.shields.io/github/release-date/deuza/ping2km)
 [![GitHub last commit](https://img.shields.io/github/last-commit/deuza/ping2km?style=plastic)](https://github.com/deuza/ping2km/commits/main)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/deuza/ping2km)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/deuza/ping2km)
 [![License: CC0](https://img.shields.io/badge/license-CC0_1.0-lightgrey.svg?style=plastic)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![License: WTFPL](https://img.shields.io/badge/license-WTFPL_2.0-lightgrey.svg?style=plastic)]()
 
