@@ -98,7 +98,7 @@ Hit `Ctrl+C` to stop, a statistics summary will be displayed, including RTT and 
 
 ## Compatibility
 
-Tested on:
+Tested on :
 
 - Debian GNU/Linux (Bookworm, Trixie) arm64/amd64
 - FreeBSD 13.x / 14.x
