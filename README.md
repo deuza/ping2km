@@ -162,7 +162,7 @@ It was revived, corrected, made portable, and properly documented in March 2026.
 [![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)    
 
 `WTFPL` -- Do What the Fuck You Want to Public License.     
-[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png)](http://www.wtfpl.net/)    
+[![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)](http://www.wtfpl.net/)    
 
 ## Author
 <a href="https://github.com/deuza">DeuZa</a>
