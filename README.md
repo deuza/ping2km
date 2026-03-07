@@ -165,7 +165,7 @@ It was revived, corrected, made portable, and properly documented in March 2026.
 [![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png)](http://www.wtfpl.net/)    
 
 ## Author
-DeuZa<a href="https://github.com/deuza"> root@deuza.bzh
+<a href="https://github.com/deuza">DeuZa</a>
 
 ## TODO       
 
