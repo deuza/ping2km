@@ -18,7 +18,7 @@ set -euo pipefail
 
 # --- Configuration ----------------------------------------------------------
 
-VERSION="1.0.0"
+VERSION="1.0.1a"
 PROGNAME=$(basename "$0")
 
 # Default medium: fiber optic (2/3 c)
