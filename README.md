@@ -12,7 +12,7 @@
 
 # ping2km
 
-**Ping with estimated distance based on the speed of light ... because why not? :D**
+**Ping with estimated distance based on the speed of light ... because why not ? :D**
 
 The shell script `ping2km` is a humorous tool that runs a continuous ping to a host and estimates the "as the fibre flies" distance based on the Round Trip Time (RTT).
 
@@ -44,8 +44,6 @@ The **copper** model uses the real propagation speed in telephone twisted pair c
 The **theoretical** model uses *c*, the speed of light in vacuum (299,792 km/s). This is the absolute physical limit, achievable only in a perfect vacuum. In reality, no transmission medium reaches *c*. But where's the fun in reality?
 
 The **dialup** model simulates the good old RTC (Public Switched Telephone Network) era. Analog modems added approximately 120 ms of round-trip latency just for signal encoding/decoding (modulation/demodulation — that's what "modem" stands for). This overhead is subtracted from the RTT before calculating the distance. Back in the dial-up days, the world was smaller. If the RTT is less than 120 ms, the distance shows `0 km [too close for dial-up]`.
-
-The output is designed to mimic standard `ping(8)` output as closely as possible, with the distance appended to each line.
 
 ## Disclaimer
 
@@ -102,9 +100,9 @@ Hit `Ctrl+C` to stop, a statistics summary will be displayed, including RTT and 
 
 Tested on :
 
-- Debian GNU/Linux (Bookworm, Trixie) arm64/amd64
+- Debian GNU/Linux 12.x / 13.x (arm64/amd64)
 - FreeBSD 13.x / 14.x
-- macOS (Darwin) Ventura, Sonoma, Sequoia
+- macOS (Darwin) Ventura, Sonoma, Sequoia (arm64)
 
 The script uses strictly POSIX `sed`, POSIX shell arithmetic `$((...))`, and `bc` for floating point, just KISS.
 
@@ -171,7 +169,8 @@ It was revived, corrected, made portable, and properly documented in March 2026.
 
 Nothing planned
 
-## BUGS
+## Bugs
+The output is designed to mimic standard `ping(8)` output as closely as possible, with the distance appended to each line.
 
 Should not work under Solaris and with exotic ping outputs.     
 The output line that is parsed should look like this:
@@ -186,9 +185,7 @@ PING www.deuza.net (66.6.44.4) 56(84) bytes of data.
 2 packets transmitted, 2 received, 0% packet loss, time 1001ms
 rtt min/avg/max/mdev = 92.836/94.470/96.105/1.634 ms
 root@pi5:~#
-
 ```
-## Star History
 
 ## Star History
 
