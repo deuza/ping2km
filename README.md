@@ -188,5 +188,8 @@ rtt min/avg/max/mdev = 92.836/94.470/96.105/1.634 ms
 root@pi5:~#
 
 ```
+## Star History
+
+[![Star History Chart](https://api.star-history.com/image?repos=deuza/ping2km&type=timeline&legend=top-left)](https://www.star-history.com/?repos=deuza%2Fping2km&type=timeline&legend=top-left)
 
 <p align="center">With ❤️ by <a href="https://github.com/deuza">DeuZa</a></p></sup></sub>
